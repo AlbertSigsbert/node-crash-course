@@ -7,6 +7,9 @@ const app = express();
 app.set('view engine', 'ejs');
 
 
+//Middleware & Static files
+app.use(express.static('public'))
+
 app.get("/", (req, res) => {
    const blogs = [
     {title:'Blog One',  snippet:'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'},
