@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 
 //Connect to MongoDB
 const dbURI =
-  "mongodb+srv://jacobsnell:ozark1234@cluster0.tmwlx.mongodb.net/node-tuts?retryWrites=true&w=majority";
+  "mongodb+srv://@cluster0.tmwlx.mongodb.net/node-tuts?retryWrites=true&w=majority";
 mongoose
   .connect(dbURI, { useNewUrLParser: true, useUnifiedTopology: true })
   .then((result) => app.listen(3000))
